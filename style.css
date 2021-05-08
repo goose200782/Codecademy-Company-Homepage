@@ -1,69 +1,66 @@
 body {
    font-family: poppins;
-   background-color: #000;
+   background-color: rgb(207, 207, 160);
 }
 
 .container {
+    display: grid;
+    grid-template-columns: 20vw repeat(5, 1fr);
+    grid-template-rows: repeat(8, 1fr);
     width: 1100px;
-    margin: 0 auto;
 }
 
 .banner {
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-    background-image: url(./resources/images/nature.jpg);
-    -webkit-background-size: cover ;
-    background-size: cover;
-    background-position: center center;
+    grid-area: 1 / 1 / span 1 / span 4;
 }
 
-.about-area,
-.services-area,
-.portfolio-area,
-.contact-area {
-    height: 100vh;
+.bigImage {
+    width: 100%;
+    height: 100%;
+    margin-left: 9vw;
+    grid-area: 3/ 1 / span 4 / span 4;
+}
+
+.bigImage > img {
+    max-width: 100%;
+    max-height: 100%;
+    border: 10px solid rgb(104, 23, 23);;
+}
+
+.fill {
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-image: url('./resources/images/new-orleans.jpg');
 }
 
 .text h2{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-transform: uppercase;
-    text-align: center;
-    padding-top: 20%;
-    font-size: 90px;
-    margin: 0;
+    text-align: left;
+    font-size: 60px;
+    margin-left: 20px;
     color: #fff;
     text-shadow: 0 5px 10px #000;
 }
 
 .sidebar {
     height: 100%;
-    width: 248px;
+    width: 20vw;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #000;
+    background-color: rgb(104, 23, 23);
     overflow: hidden;
-    padding-top: 20px;
-}
-.home {
-    grid-area: home;
-}
-
-.about {
-    grid-area: about;
+    padding-top: 0px;
+    text-align: left;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.services {
-    grid-area: services;
-}
-
-.portfolio {
-    grid-area: portfolio;
-}
-
-.contact {
-    grid-area: contact;
+.sidebar img {
+    max-width: 95%;
+    border: 4px solid rgb(104, 23, 23);
 }
 
 .sidebar a{
@@ -76,7 +73,10 @@ body {
 }
 
 .sidebar a:hover {
-    color: darkolivegreen;
+    /* color: darkolivegreen; */
+    text-shadow: 0 5px 10px #000;
+    transform: scale(1.03);
+    transition: all 0.3s ease-in-out;
 }
 
 .main {

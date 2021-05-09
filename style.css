@@ -63,55 +63,6 @@ body {
     align-self: center;
 }
 
-.fill {
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-image: url('./resources/images/new-orleans.jpg');
-}
-
-.fill2 {
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-image: url('./resources/images/streetcar-on-canal-street.jpg');
-}
-
-.fill3 {
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-image: url('./resources/images/dome.jpg');
-}
-
-.fill4 {
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-image: url('./resources/images/gold-seal.jpg');
-}
-
-.fill5 {
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-image: url('./resources/images/glorious-new-orleans-panoramic-frozen-in-time-fine-art-photography.jpg');
-}
-
-.fill6 {
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-image: url('./resources/images/Super-Sunday-2016-048-panorama.png');
-}
-
-.mardigras {
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-image: url('./resources/images/mardi-gras.jpg');
-}
-
 .logo {
     border-top-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
@@ -225,4 +176,113 @@ body {
     width: 83vw;
     height: 20vh;
     z-index: -1;
+}
+
+/* Images */
+.fill {
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-image: url('./resources/images/new-orleans.jpg');
+}
+
+.fill2 {
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-image: url('./resources/images/streetcar-on-canal-street.jpg');
+}
+
+.fill3 {
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-image: url('./resources/images/dome.jpg');
+}
+
+.fill4 {
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-image: url('./resources/images/gold-seal.jpg');
+}
+
+.fill5 {
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-image: url('./resources/images/glorious-new-orleans-panoramic-frozen-in-time-fine-art-photography.jpg');
+}
+
+.fill6 {
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-image: url('./resources/images/Super-Sunday-2016-048-panorama.png');
+}
+
+.mardigras {
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-image: url('./resources/images/mardi-gras.jpg');
+}
+
+@media screen and (max-width: 1050px){
+    html{
+        font-size: 12px;
+    }
+    .sidebar{
+        display: none;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(20, 1fr);
+        grid-gap: 5vh;
+        width: 95vw;
+    }
+
+    .banner {
+        grid-area: 1 / 1 / span 1 / -1;
+    }
+
+    .caption {
+        font-size: 1.07rem;
+    }
+
+    .one {
+        grid-area: 2 / 1 / span 2 / span 2;
+    }
+    
+    .two {
+        grid-area: 2 / 4 / span 2 / span 2;
+    }
+    
+    .three {
+        grid-area: 2 / 3 / span 2 / span 1;
+    }
+
+    
+.about-section{
+    grid-area: 5 / 1 / span 1 / -1;
+    width: 100vw;
+}
+
+.about-content{
+    grid-area: 6 / 1 / span 3 / -1;
+}
+
+.services-section{
+    grid-area: 9 / 1 / span 1/ -1;
+    width: 100vw;
+}
+
+.contact-section{
+    grid-area: 13 / 1 / span 1/ -1;
+    width: 100vw;
+}
+    
+    
 }

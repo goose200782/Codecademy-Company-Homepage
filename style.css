@@ -1,12 +1,12 @@
 body {
    font-family: poppins;
-   background-color: white
+   background-color: rgb(230, 212, 56)
 }
 
 .container {
     display: grid;
     grid-template-columns: 15vw repeat(5, 1fr);
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-rows: repeat(15, 1fr);
     width: 98vw;
 }
 
@@ -19,6 +19,7 @@ body {
 
 .banner {
     grid-area: 1 / 2 / span 1 / -1;
+    height: 20vh;
 }
 
 .one {
@@ -65,7 +66,28 @@ body {
     overflow: hidden;
     background-size: cover;
     background-position: center;
-    background-image: url('./resources/images/seal.jpg');
+    background-image: url('./resources/images/gold-seal.jpg');
+}
+
+.fill5 {
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-image: url('./resources/images/glorious-new-orleans-panoramic-frozen-in-time-fine-art-photography.jpg');
+}
+
+.fill6 {
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-image: url('./resources/images/Super-Sunday-2016-048-panorama.png');
+}
+
+.mardigras {
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-image: url('./resources/images/mardi-gras.jpg');
 }
 
 .logo {
@@ -78,7 +100,7 @@ body {
     text-transform: uppercase;
     text-align: left;
     font-size: 60px;
-    margin-left: 5vw;
+    margin-left: 3vw;
     color: #fff;
     text-shadow: 0 5px 10px #000;
 }
@@ -112,29 +134,31 @@ body {
 }
 
 .sidebar a:hover {
-    color: gold;
+    color: rgb(230, 212, 56);
     text-shadow: 0 5px 10px #000;
     transform: scale(1.03);
     transition: all 0.3s ease-in-out;
 }
 
-/* .main {
-    margin-left: 230px;
-    padding: 0 10px;
-} */
-
-#about{
-    background: darkkhaki;
+.about-section{
+    grid-area: 5 / 2 / span 1 / -1;
+    width: 83vw;
+    z-index: -1;
+    height: 20vh;
 }
 
-#services{
-    background: darkorchid;
+.services-section{
+    grid-area: 9 / 2 / span 1/ span 2;
+    width: 83vw;
+    height: 20vh;
+    z-index: -1;
 }
 
-#portfolio{
-    background: darksalmon;
-}
 
-#contact{
-    background: dodgerblue;
+.contact-section{
+    margin-top: -8vh;
+    grid-area: 13 / 2 / span 1/ span 2;
+    width: 83vw;
+    height: 20vh;
+    z-index: -1;
 }

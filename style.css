@@ -298,6 +298,18 @@ body {
         font-size: 10px;
     }
 
+    .container {
+        display: grid;
+        grid-template-columns: 15vw repeat(5, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        width: 98vw;
+        height: 400vw;
+    }
+
+    .marbot {
+        margin-bottom: 10vh;
+    }
+
     #seal{
         display:none;
     }

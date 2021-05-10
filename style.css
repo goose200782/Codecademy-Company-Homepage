@@ -118,7 +118,7 @@ body {
 
 .about-section{
     grid-area: 5 / 2 / span 1 / -1;
-    width: 83vw;
+    /* width: 83vw; */
     z-index: -1;
     height: 20vh;
 }
@@ -274,6 +274,14 @@ body {
     grid-area: 6 / 1 / span 3 / -1;
 }
 
+.about-caption1{
+    grid-area: 2 / 1 / span 6 / span 2;
+}
+
+.about-caption2{
+    grid-area: 3 / 8 / span 6 / span 2;
+}
+
 .services-section{
     grid-area: 9 / 1 / span 1/ -1;
     width: 100vw;
@@ -282,7 +290,42 @@ body {
 .contact-section{
     grid-area: 13 / 1 / span 1/ -1;
     width: 100vw;
+}   
 }
+
+@media screen and (max-width: 600px) {
+    html{
+        font-size: 10px;
+    }
+
+    #seal{
+        display:none;
+    }
+    .one {
+        grid-area: 2 / 2 / span 2 / span 1;
+    }
     
+    .two {
+        grid-area: 2 / 3 / span 2 / span 1;
+    }
+
+    .about-section{
+        width: 150vw;
+    }
+
+    .about-caption1{
+        grid-area: 1 / 1 / span 6 / span 2;
+    }
     
+    .about-caption2{
+        grid-area: 2 / 8 / span 6 / span 2;
+    }
+
+    .services-section{
+        width: 150vw;
+    }
+
+    .contact-section{
+        width: 150vw;
+    }
 }

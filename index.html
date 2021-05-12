@@ -8,63 +8,99 @@
     <title>Codecademy-Company-Homepage</title>
 </head>
 <body>
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <img class="logo" src="./resources/images/gold-fleur-de-lis.jpg" alt="Fleur de lis"/>
-        <a href="#home" class="home">Home</a>
-        <a href="#about" class="about">About</a>
-        <a href="#services" class="services">Services</a>
-        <a href="#contact" class="contact">Contact</a>
-    </div>
-    <div class="container"><!--Main Grid-->
-        <!-- Top Banner -->
-        <div id="home" class="banner fill border marbot">
-            <div class="text ">
-                <h2>Big Easy Tours</h2>
+    <!--------------------- Main page --------------->
+    <div id="wholePageContainer" class="flex-container">
+            <!----------------------- Sidebar --------------->
+            <div id="sidebar" class="flex-container column sidebar textStyle">
+                <img class="logo" src="./resources/images/gold-fleur-de-lis.jpg" alt="Fleur de lis"/>
+                <div id="sidebar-links" class="flex-container column">
+                    <a href="#home-section" class="home">Home</a>
+                    <a href="#about-section" class="about">About</a>
+                    <a href="#services-section" class="services">Services</a>
+                    <a href="#contact-section" class="contact">Contact</a>
+                </div>
             </div>
-        </div>
-                <!-- Picture Left -->
-                <div class="picture one fill2">
-                    <h6 class="caption">See the famous street cars!</h6>
-                </div>
-                <!-- Picture Right -->
-                <div class="picture two fill3">
-                    <h6 class="caption">Tour Downtown New Orleans!</h6>
-                </div>
-                <!-- Picture of a Seal -->
-                <div id="seal" class="picture three fill4"></div>
 
-         <!--About section-->
-        <div id="about" class="about-section fill6 border marbot">
-            <div class="text">
-                <h2>About</h2>
+        <!-- Home Section -->
+        <div id="home-section" class="flex-container column">
+            <div class="section-banner marginBottom">
+                <h1 class="large text center">Big Easy Tours</h1>
+            </div>
+            <div id="home-images" class="flex-container column">
+                <h1 id="home-header" class="text marginBottom ">Come see all the attractions!</h1>
+                    <img class="image" src="./resources/images/streetcar-on-canal-street.jpg">
+                    <h4 id="cap1" class="caption text marginBottom">See the famous street cars!</h4>
+                    <img class="image" src="./resources/images/dome.jpg" alt="">
+                    <h4 id="cap2" class="caption text">Tour Downtown New Orleans!</h4>
+            </div>
+
+            <!-- About Section -->
+            <div id="about-section" class="section-banner marginTop marginBottom">
+                <h1 class="large text center">About</h1>
+            </div>
+            <div id="about-images" class="flex-container column">
+                <div class="width75">
+                    <p id="cap1" class="caption medium text">For the last 25 years, when it comes to servicing the needs
+                        of the tourists and citizens of New Orleans, NO ONE does it better than Big Easy Tours!</p>
+                </div>
+                <img class="image marginBottom" src="./resources/images/doubledecker.jpg">
+                <div class="width75">
+                    <p id="cap1" class="caption medium text">It is our mission to give our guests the best tour of the city known to man!</p>
+                </div>
+               
+            </div>     
+            
+            <!--Services section-->
+        <div id="services-section" class="section-banner marginTop marginBottom">
+                <h1 class="large text center">Services</h2>
+        </div>
+        
+        <div class="grid">
+            <h1 id="hone" class="text marginBottom">Our Team</h1>
+            <div id="ceo" class="teammate">
+                <img src="./resources/images/person1.jpg" alt="">
+                <h4>Omar Carlsen</h4>
+                <p>C.E.O. - Founder and Principal Investor</p>
+            </div>
+            <div id="market" class="teammate">
+                <img src="./resources/images/person2.jpg" alt="">
+                <h4>Lisa Fischer</h4>
+                <p>Partner - Partnerships &amp; Marketing</p>
+            </div>
+            <div id="research" class="teammate">
+                <img src="./resources/images/person3.jpg" alt="">
+                <h4>Alex Lasker</h4>
+                <p>Partner - Research &amp; Development</p>
+            </div>
+            <div id="cfo" class="teammate">
+                <img src="./resources/images/person4.jpg" alt="">
+                <h4>James Jones</h4>
+                <p>C.F.O. - Pricipal Investor</p>
             </div>
             
         </div>
-        <div class="about-content">
-            <div class="doubledecker about-image"></div>
-            <p class="about-caption1">For the last 25 years, when it comes to servicing the needs
-                 of the tourists and citizens of New Orleans, NO ONE does it better than Big Easy Tours!
-            </p>
-            <p class="about-caption2">It is our mission to give our guests the best tour of the city known to man!
-           </p>
-
+    
+        <!-- Contact Section -->
+        <div id="contact-section" class="section-banner marginTop marginBottom">
+            <h1 class="large text center">Contact</h1>
         </div>
-
-        <!--Services section-->
-        <div id="services" class="marbot services-section mardigras border">
-            <div class="text">
-                <h2>Services</h2>
-            </div>
-        </div>
-
-        <!--Contact section-->
-        <div id="contact" class="marbot contact-section fill5 border">
-            <div class="text">
-                <h2>Contact</h2>
-            </div>
-        </div>
+        <div id="contact-images" class="grid width75 text center">
+            
+            <h2 id="contact-header" class="medium text">Big Easy Tours </h2>   
+            <img id="pic" src="./resources/images/rojan-maharjan-zePUGCxya-k-unsplash.jpg" alt="">
+            <h3 id="email" class="medium">tour504@bigeasytours.com</h3>
+            <h3 id="phone" class="large">(555)-567-5309</h3>
+            <h3 id="copyright">© Big Easy Tours 2021</h3>
+            
+            
+            
+           
+           
+        </div>     
+                    
     </div>
+
+                
    
         
 </body>

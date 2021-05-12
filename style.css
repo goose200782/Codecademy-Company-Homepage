@@ -1,5 +1,94 @@
+/* text stuff */
 html {
     font-size: 16px;
+}
+body{
+    margin: 0;
+}
+.textStyle{
+    color: white;
+    text-shadow: 0 0.3125rem 0.625rem #000;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.large{
+    font-size: 3.75rem;
+}
+
+.medium{
+    font-size: 1.57rem;
+    text-decoration: none !important;
+}
+
+.marginBottom{
+    margin-bottom: 3rem;
+}
+
+.marginTop{
+    margin-top: 16rem;
+}
+
+.image{
+    margin-top: 1rem;;
+    width: 50%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+/* Generic stuff */
+.center{
+   text-align: center;
+   margin-left: -10vw;
+}
+
+#wholePageContainer{
+    width: 100vw;
+    height: 100vh;
+    /* justify-content: center; */
+}
+
+
+.logo {
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+.flex-container{
+    display: flex;
+    flex: 1;
+}
+
+
+.grid{
+    justify-self: center;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+}
+
+#contact-header{
+    grid-area: 1 / 4 / span 2 /span 6;
+}
+
+#pic{
+    grid-area: 4 / 2 / span 7/ span 10;
+    width: 100%;
+}
+
+#email{
+    grid-area: 12 / 2 /span 2 / span 10;
+}
+
+#phone{
+    grid-area: 15 / 2 / span 3 / span 10;
+}
+
+#copyright{
+    grid-area: 20 / 2 / span 1 / span 10;
+}
+
+.column{
+    flex-direction: column;
 }
 
 body {
@@ -7,104 +96,31 @@ body {
    background-color: rgb(230, 212, 56)
 }
 
-.container {
-    display: grid;
-    grid-template-columns: 15vw repeat(5, 1fr);
-    grid-template-rows: repeat(30, 1fr);
-    width: 98vw;
-    height: 400vw;
-}
 
-.picture {
-    max-width: 100%;
-    border-top-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    justify-self: center;
-    display: grid;
-    grid-template: repeat(3, 1fr) / repeat(6, 1fr);
-}
 
-.border {
-    border-top: 0.3125rem solid rgb(114, 18, 22);
-    border-bottom: 0.3125rem solid rgb(114, 18, 22);
-}
-
-.banner {
-    grid-area: 1 / 2 / span 1 / -1;
-    height: 20vh;
-}
-
-.one {
-    grid-area: 2 / 2 / span 2 / span 2;
-    width: 25rem;
-    height: 25rem;
-}
-
-.caption {
-    justify-self: center;
-    color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 1.5rem;
-    grid-area: 4 / 1 / -1 / -1;
-    text-shadow: 0 0.3125rem 0.625rem #000;
-    margin: 0;
-}
-
-.two {
-    grid-area: 2 / 5 / span 2 / span 2;
-    width: 25rem;
-    height: 25rem;
-}
-
-.three {
-    grid-area: 2 / 4 / span 2 / span 1;
-    width: 12.5rem;
-    height: 12.5rem;
-    align-self: center;
-}
-
-.logo {
-    border-top-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-}
-
-.text h2{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-transform: uppercase;
-    text-align: left;
-    font-size: 3.75rem;
-    margin-left: 3vw;
-    color: #fff;
-    text-shadow: 0 0.3125rem 0.625rem #000;
-    letter-spacing: 0.15rem;
-    text-decoration: underline;
-    text-decoration-color: rgb(230, 212, 56)
-}
-
+/* Sidebar */
 .sidebar {
-    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
     width: 15vw;
+    height: 100vh;
     position: fixed;
     z-index: 1;
-    top: 0;
-    left: 0;
     background-color: rgb(114, 18, 22);
     overflow: hidden;
     padding-top: 0px;
     text-align: left;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .sidebar img {
-    max-width: 95%;
+    max-width: 96%;
     border: 4px solid rgb(114, 18, 22);
+    /* border-radius: 100%; */
 }
 
 .sidebar a{
-    padding: 50px 10px 10px 50px;
     text-decoration: none;
-    font-size: 1.125rem;
-    display: block;
+    font-size: 1.325rem;
     text-transform: uppercase;
     color: #fff;
 }
@@ -113,231 +129,167 @@ body {
     color: rgb(230, 212, 56);
     text-shadow: 0 0.3125rem 0.625rem #000;
     transform: scale(1.03);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2 s ease-out;
 }
 
-.about-section{
-    grid-area: 5 / 2 / span 1 / -1;
-    /* width: 83vw; */
-    z-index: -1;
-    height: 20vh;
-}
-
-.about-content{
-    grid-area: 6 / 2 / span 3 / -1;
-    display: grid;
-    grid-template: repeat(10, 1fr) / repeat(10, 1fr);
-    color: white;  
-    z-index: 15;
-}
-
-.about-image {
-    max-width: 100%;
-    grid-area: 1 / 3 / span 6 / span 5;
-}
-
-.about-caption1 {
-    margin: .17rem;
-    grid-area: 3 / 1 / span 6 / span 2;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 1.5rem;
-    text-shadow: 0 0.3125rem 0.625rem #000;
-    text-align: center;
-}
-
-.about-caption2 {
-    margin: .17rem;
-    grid-area: 4 / 8 / span 6 / span 2;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 1.5rem;
-    text-shadow: 0 0.3125rem 0.625rem #000;
-    text-align: center;
-}
-
-.doubledecker {
-    overflow: hidden;
-    background-size: cover;
-    background-position: bottom;
-    background-image: url('./resources/images/doubledecker.jpg');
-    border-radius: 1rem;
-}
-
-.services-section{
-    grid-area: 9 / 2 / span 1/ span 2;
-    width: 83vw;
-    height: 20vh;
-    z-index: -1;
+#sidebar-links{
+    justify-content: space-evenly;
+    align-items: center;
+    /* border-top: 2px solid white; */
+    width: 100%;
+    height: 60%;
 }
 
 
-.contact-section{
-    margin-top: -8vh;
-    grid-area: 13 / 2 / span 1/ span 2;
-    width: 83vw;
-    height: 20vh;
-    z-index: -1;
+
+/* Home Section */
+#home-section{
+    margin-left: 15vw;
+    width: 85vw;
 }
 
-/* Images */
-.fill {
-    overflow: hidden;
+#home-images {
+    width: 85vw;
+    grid-area: 4/ 1/ span 7/ span 12;
+    align-items: center;
+}
+
+.section-banner{
+    width: 100%;
+    /* height: 125rem; */
+    /* overflow: hidden; */
     background-size: cover;
     background-position: center;
     background-image: url('./resources/images/new-orleans.jpg');
+    border-top: 0.3125rem solid rgb(114, 18, 22);
+    border-bottom: 0.3125rem solid rgb(114, 18, 22);
 }
 
-.fill2 {
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-image: url('./resources/images/streetcar-on-canal-street.jpg');
+.text{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    /* text-align: left; */
+    /* margin-left: 3vw; */
+    color: #fff;
+    text-shadow: 0 0.3125rem 0.625rem #000;
+    /* letter-spacing: 0.15rem; */
+    text-decoration: underline;
+    text-decoration-color: rgb(230, 212, 56)
 }
 
-.fill3 {
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-image: url('./resources/images/dome.jpg');
+
+/* About Section */
+#home-section{
+    margin-left: 15vw;
+    width: 85vw;
 }
 
-.fill4 {
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-image: url('./resources/images/gold-seal.jpg');
+#about-images {
+    width: 85vw;
+    align-items: center;
 }
 
-.fill5 {
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-image: url('./resources/images/glorious-new-orleans-panoramic-frozen-in-time-fine-art-photography.jpg');
+.width75{
+    /* text-align: center; */
+    width: 75%;
 }
 
-.fill6 {
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-image: url('./resources/images/Super-Sunday-2016-048-panorama.png');
+.pElement > p {
+    text-align: center;
 }
 
-.mardigras {
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-image: url('./resources/images/mardi-gras.jpg');
+#hone{
+    grid-area: 1 / 6 / span 5 / span 4;
 }
 
-@media screen and (max-width: 1050px){
-    html{
+#ceo{
+    grid-area: 5 / 2 / span 5 / span 4;
+    justify-self: center;
+}
+
+#market{
+    grid-area: 5 / 8 / span 5 / span 4;
+    justify-self: center;
+}
+
+#research{
+    grid-area: 16 / 2 / span 5 / span 4;
+    justify-self: center;
+}
+
+#cfo{
+    grid-area: 16 / 8 / span 5 / span 4;
+    justify-self: center;
+}
+
+
+
+
+.teammate {
+    justify-content: center;
+}
+
+.teammate > h4 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0.3125rem 0.625rem #000;
+    z-index: 7;
+    margin: 0;
+}
+
+.teammate > img {
+    width: 100%;
+    /* margin: 0; */
+}
+
+.teammate > p {
+    /* margin-top: -5vh; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0.3125rem 0.625rem #000;
+    z-index: 7;
+    margin: 0;
+    margin-bottom: 3rem;
+}
+
+#contact-images{
+    margin-left: 5rem;
+}
+
+#pic {
+    margin: 0;
+}
+
+@media screen and (max-width:600px) {
+    html {
+        font-size: 9px;
+    }
+
+    .large{
+        font-size: 2.75rem;
+    }
+
+    .image{
+        width: 100%;
+    }
+
+    #home-header{
+        text-align: center;
+    }
+
+    #hone{
+        grid-area: 1 / 5 / span 5 / span 4;
+    }
+    
+}
+
+@media screen and (max-width:760px) {
+    html {
         font-size: 12px;
     }
-    .sidebar{
-        display: none;
-    }
-
-    .container {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(20, 1fr);
-        grid-gap: 5vh;
-        width: 95vw;
-    }
-
-    .banner {
-        grid-area: 1 / 1 / span 1 / -1;
-    }
-
-    .caption {
-        font-size: 1.07rem;
-    }
-
-    .one {
-        grid-area: 2 / 1 / span 2 / span 2;
-    }
     
-    .two {
-        grid-area: 2 / 4 / span 2 / span 2;
-    }
-    
-    .three {
-        grid-area: 2 / 3 / span 2 / span 1;
-    }
-
-    
-.about-section{
-    grid-area: 5 / 1 / span 1 / -1;
-    width: 100vw;
-}
-
-.about-content{
-    grid-area: 6 / 1 / span 3 / -1;
-}
-
-.about-caption1{
-    grid-area: 2 / 1 / span 6 / span 2;
-}
-
-.about-caption2{
-    grid-area: 3 / 8 / span 6 / span 2;
-}
-
-.services-section{
-    grid-area: 9 / 1 / span 1/ -1;
-    width: 100vw;
-}
-
-.contact-section{
-    grid-area: 13 / 1 / span 1/ -1;
-    width: 100vw;
-}   
-}
-
-@media screen and (max-width: 600px) {
-    html{
-        font-size: 10px;
-    }
-
-    .container {
-        display: grid;
-        grid-template-columns: 15vw repeat(5, 1fr);
-        grid-template-rows: repeat(8, 1fr);
-        width: 98vw;
-        height: 400vw;
-    }
-
-    .marbot {
-        margin-bottom: 10vh;
-    }
-
-    #seal{
-        display:none;
-    }
-    .one {
-        grid-area: 2 / 2 / span 2 / span 1;
-    }
-    
-    .two {
-        grid-area: 2 / 3 / span 2 / span 1;
-    }
-
-    .about-section{
-        width: 150vw;
-    }
-
-    .about-caption1{
-        grid-area: 1 / 1 / span 6 / span 2;
-    }
-    
-    .about-caption2{
-        grid-area: 2 / 8 / span 6 / span 2;
-    }
-
-    .services-section{
-        width: 150vw;
-    }
-
-    .contact-section{
-        width: 150vw;
-    }
 }

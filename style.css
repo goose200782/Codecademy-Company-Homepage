@@ -300,3 +300,10 @@ body {
     }
     
 }
+
+@media screen and (max-height:320px) {
+    #phone{
+        font-size: 2.75rem;
+    }
+    
+}

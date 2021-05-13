@@ -285,11 +285,18 @@ body {
         grid-area: 1 / 5 / span 5 / span 4;
     }
     
+    .sidebar > a {
+        font-size: .75rem;
+    }
 }
 
 @media screen and (max-width:760px) {
     html {
         font-size: 12px;
+    }
+
+    .sidebar > a {
+        font-size: .5rem;
     }
     
 }
